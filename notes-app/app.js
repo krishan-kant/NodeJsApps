@@ -1,1 +1,2 @@
-console.log("Test 2")
+const fs = require('fs')
+fs.writeFileSync('notes.txt','This File was created by nodejs')
