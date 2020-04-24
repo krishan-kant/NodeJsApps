@@ -1,4 +1,10 @@
 const validator = require('validator')
+const chalk = require('chalk')
+
+
+const log= console.log
+
+log(chalk.green.inverse('Hara rang hai ye'))
 
 const getNotes=require('./notes.js')
 
