@@ -1,6 +1,17 @@
 const express = require('express')
+const path= require('path')
+
+const log= console.log
+
+
+log(__dirname)
+const public_path=path.join(__dirname,'../public')
+log(__filename)
+
 
 const app=express()
+
+app.use(express.static(public_path))
 
 app.get('',(req,res) => {
     res.send('Hello, Elliot!')
