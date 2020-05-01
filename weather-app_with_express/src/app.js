@@ -41,8 +41,25 @@ app.get('/about',(req,res) => {
     })
 })
 
+const request = require('request')
+
 app.get('/weather',(req,res) => {
-    res.send('Weather is fine, but are you?')
+    if(!req.query.search){
+        return res.send({
+            error: "You need to provide an address!"
+        })
+    }
+    const city=req.query.search
+    const url="http://api.weatherstack.com/current?access_key=89d934ceac10b44ff02ba21b28ee3901&query="+encodeURIComponent(city)
+    request((url), (error,response) => {
+        if(error){
+            res.send("No result found, check your connectivity and enter valid location")
+        }
+        else{
+            const data = JSON.parse(response.body)  
+                return res.send(data)
+        }
+    })
 })
 
 app.get('/help/*',(req,res) => {
