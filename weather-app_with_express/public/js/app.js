@@ -25,25 +25,11 @@ weather_form.addEventListener('submit',(e) => {
                 message_1.textContent = "Location not found"
             }
             else{
-                //var locat = "City:"
-                //locat.concat(data.location.name,"\nRegion:",data.location.region,"\nCountry:",data.location.country)
-                const l1=data.location.name
-                const l2=data.location.region
-                const l3=data.location.country
-                const l4=l1+" "+l2+" "+l3
-                message_1.textContent=l4
-                const w1=data.current.weather_descriptions[0]
-                const w2=data.current.temperature
-                const w3=data.current.humidity
-                const w4=w1+" Temperature "+w2+"C Humidity "+w3
-                message_2.textContent=w4
-                //const address = data.location.name+" "+data.location.region+" "+data.location.country
-                //console.log(address)
-                // console.log({
-                //     Weather_details: data.current.weather_descriptions[0],
-                //     current: data.current.temperature,
-                //     Humidity: data.current.humidity
-                // })
+                const location_output="City:"+data.location.name+"\nRegion:"+data.location.region+"\nCountry:"+data.location.country
+                message_1.textContent=location_output
+                const weather_output=data.current.weather_descriptions[0]+" The current temperature is "+data.current.temperature+"C, Humidity is "+data.current.humidity
+                message_2.textContent=weather_output
+                
             }
         })
     })
