@@ -11,7 +11,7 @@ The app uses the previous concept and the previous code is now divided in server
     The second script file in public/js/app.js is the client side script and it requests the data from api via the first script. The output is then rendered into the home page.
     Static pages were removed and dynamic pages are now added.
     
-    ![Home page](/images/1.png)
-    ![Searched result](/images/2.png)
-    ![About page](/images/3.png)
+    ![Home page](https://github.com/krishan-kant/NodeJsApps/blob/master/images/1.png)
+    ![Searched result](https://github.com/krishan-kant/NodeJsApps/blob/master/images/2.png)
+    ![About page](https://github.com/krishan-kant/NodeJsApps/blob/master/images/3.png)
     
